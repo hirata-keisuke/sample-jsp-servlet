@@ -1,21 +1,21 @@
 package me.action;
 
-import static org.junit.jupiter.api.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-import static org.easymock.EasyMock.createMock;
-import static org.easymock.EasyMock.expect;
-import static org.easymock.EasyMock.replay;
-import static org.easymock.EasyMock.verify;
+import org.easymock.EasyMock.createMock;
+import org.easymock.EasyMock.expect;
+import org.easymock.EasyMock.replay;
+import org.easymock.EasyMock.verify;
 
 import org.junit.jupiter.api.Test;
-import org.junit.platform.runner.JUnitCore;
+//import org.junit.platform.runner.JUnitCore;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 
 public class SampleActionTest {
 
 	public static void main(String[] args) {
-		JUnitCore.main(SampleActionTest.class.getName());
+//		JUnitCore.main(SampleActionTest.class.getName());
 	}
 
 	@Test

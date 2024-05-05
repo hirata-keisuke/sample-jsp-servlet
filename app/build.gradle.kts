@@ -7,8 +7,8 @@ repositories {
 }
 
 dependencies {
-    compileOnly("jakarta.servlet:jakarta.servlet-api:6.0.0")
-    compileOnly("jakarta.servlet.jsp:jakarta.servlet.jsp-api:3.1.1")
+    implementation("jakarta.servlet:jakarta.servlet-api:6.0.0")
+    implementation("jakarta.servlet.jsp:jakarta.servlet.jsp-api:3.1.1")
     
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.0")
     testImplementation("org.junit.jupiter:junit-jupiter-engine:5.10.0")
