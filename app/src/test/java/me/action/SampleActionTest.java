@@ -2,10 +2,10 @@ package me.action;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.easymock.EasyMock.createMock;
-import org.easymock.EasyMock.expect;
-import org.easymock.EasyMock.replay;
-import org.easymock.EasyMock.verify;
+import static org.easymock.EasyMock.createMock;
+import static org.easymock.EasyMock.expect;
+import static org.easymock.EasyMock.replay;
+import static org.easymock.EasyMock.verify;
 
 import org.junit.jupiter.api.Test;
 import jakarta.servlet.http.HttpServletRequest;
