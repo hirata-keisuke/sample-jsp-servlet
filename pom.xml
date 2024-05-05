@@ -44,8 +44,8 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     
     <!-- Maven Properties -->
-    <maven-compiler.version>3.9.6</maven-compiler.version>
-    <maven-site.version>3.9.6</maven-site.version>
+    <maven-compiler.version>3.8.1</maven-compiler.version>
+    <maven-site.version>3.3</maven-site.version>
     <maven-surefire-report.version>2.20</maven-surefire-report.version>
     <maven-war.version>3.0.0</maven-war.version>
     
