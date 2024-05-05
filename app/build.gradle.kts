@@ -12,6 +12,7 @@ dependencies {
     
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.0")
     testImplementation("org.junit.jupiter:junit-jupiter-engine:5.10.0")
+    testImplementation("org.easymock:easymock:4.3")
 }
 
 java {
