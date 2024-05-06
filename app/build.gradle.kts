@@ -25,6 +25,11 @@ java {
     }
 }
 
+jacoco {
+    toolVersion = "0.8.11"
+    reportsDirectory = layout.buildDirectory.dir("app/build/reports/jacoco")
+}
+
 tasks.named<Test>("test") {
     useJUnitPlatform()
     maxHeapSize = "1G"
@@ -33,3 +38,10 @@ tasks.named<Test>("test") {
     }
 }
 
+tasks.jacocoTestReport {
+    reports {
+        xml.required = true
+        csv.required = false
+        html.outputLocation = layout.buildDirectory.dir("app/build/reports/jacoco")
+    }
+}
