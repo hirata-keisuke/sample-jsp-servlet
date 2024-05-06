@@ -19,12 +19,12 @@ public class SampleAction {
     }
 
     public final boolean checkParameter(final HttpServletRequest req) {
-        String firstName = req.getParameter("firstName");
+        String firstName = req.getParameter("FirstName");
         if (firstName == null || "".equals(firstName)) {
             return false;
         }
         
-        String lastName = req.getParameter("lastName");
+        String lastName = req.getParameter("LastName");
         if (lastName == null || "".equals(lastName)) {
             return false;
         }
