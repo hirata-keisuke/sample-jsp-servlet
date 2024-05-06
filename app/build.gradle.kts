@@ -2,6 +2,7 @@ plugins {
     application
     war
     checkstyle
+    jacoco
 }
 
 repositories {
