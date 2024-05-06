@@ -46,5 +46,4 @@ tasks.jacocoTestReport {
         html.required = true
         html.outputLocation = layout.buildDirectory.dir("app/build/reports/jacoco")
     }
-    xml.outputLocation = "app/build/reports/jacoco/test.xml"
 }
