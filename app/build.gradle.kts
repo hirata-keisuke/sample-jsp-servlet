@@ -1,4 +1,5 @@
 plugins {
+    java
     application
     war
     checkstyle
@@ -42,7 +43,8 @@ tasks.jacocoTestReport {
     dependsOn(tasks.test)
     reports {
         xml.required = true
-        csv.required = true
+        xml.outputLocation = layout.buildDirectory.dir("app/build/reports/jacoco")
+        html.required = true
         html.outputLocation = layout.buildDirectory.dir("app/build/reports/jacoco")
     }
 }
