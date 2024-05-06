@@ -1,6 +1,7 @@
 plugins {
     application
     war
+    checkstyle
 }
 
 repositories {
