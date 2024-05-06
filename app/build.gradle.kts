@@ -39,7 +39,7 @@ tasks.named<Test>("test") {
 }
 
 tasks.jacocoTestReport {
-    executionData = files(tasks.jacocoTestReport.executionData)
+    dependsOn(tasks.test)
     reports {
         xml.required = true
         csv.required = true
