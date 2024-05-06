@@ -8,6 +8,7 @@ import static org.easymock.EasyMock.replay;
 import static org.easymock.EasyMock.verify;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 
@@ -16,6 +17,7 @@ public class SampleActionTest {
 	public static void main(String[] args) {}
 
 	@Test
+    @DisplayName("名字と名前を入力した場合")
 	public void testCheckNormal() {
 		SampleAction action = new SampleAction();
 		HttpServletRequest request = createMock(HttpServletRequest.class);
@@ -31,6 +33,7 @@ public class SampleActionTest {
 	}
 
 	@Test
+    @DisplayName("名字がNULLの場合")
 	public void testCheckError1() {
 		SampleAction action = new SampleAction();
 		HttpServletRequest request = createMock(HttpServletRequest.class);
@@ -45,6 +48,7 @@ public class SampleActionTest {
 	}
 
 	@Test
+    @DisplayName("名字は正常、名前がNULLの場合")
 	public void testCheckError2() {
 		HttpServletRequest request = createMock(HttpServletRequest.class);
 		SampleAction action = new SampleAction();
@@ -60,6 +64,7 @@ public class SampleActionTest {
 	}
 	
 	@Test
+    @DisplayName("空の名前のみの場合")
 	public void testCheckError3() {
 		SampleAction action = new SampleAction();
 		HttpServletRequest request = createMock(HttpServletRequest.class);
@@ -74,6 +79,7 @@ public class SampleActionTest {
 	}
 
 	@Test
+    @DisplayName("SampleActionが名字と名前を受け取る場合")
 	public void testExecuteNormal() {
 		SampleAction action = new SampleAction("firstName", "lastName");
 		HttpServletRequest request = createMock(HttpServletRequest.class);
