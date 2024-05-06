@@ -35,7 +35,7 @@ public class SampleAction {
     public final String execute(final HttpServletRequest req) {
         SampleDTO dto = new SampleDTO(firstName, lastName);
 
-        HttpSession session = req.getSession();
+        HttpSession session = req.getSession(true);
         session.setAttribute("dto", dto);
 
         return "./WEB-INF/result.jsp";
