@@ -14,6 +14,7 @@ dependencies {
     
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.0")
     testImplementation("org.junit.jupiter:junit-jupiter-engine:5.10.0")
+    testImplementation("org.junit.platform:junit-platform-launcher:1.10.1")
     testImplementation("org.easymock:easymock:4.3")
 }
 
@@ -23,5 +24,11 @@ java {
     }
 }
 
-
+tasks.named<Test>("test") {
+    useJUnitPlatform()
+    maxHeapSize = "1G"
+    testLogging {
+        events("passed")
+    }
+}
 
