@@ -37,6 +37,7 @@ tasks.named<Test>("test") {
     testLogging {
         events("passed")
     }
+    finalizedBy("jacocoTestReport")
 }
 
 tasks.jacocoTestReport {
