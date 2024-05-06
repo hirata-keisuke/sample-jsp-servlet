@@ -43,7 +43,7 @@ tasks.jacocoTestReport {
     dependsOn(tasks.test)
     reports {
         xml.required = true
-        xml.outputLocation = layout.buildDirectory.dir("app/build/reports/jacoco")
+        xml.destination = layout.buildDirectory.dir("app/build/reports/jacoco")
         html.required = true
         html.outputLocation = layout.buildDirectory.dir("app/build/reports/jacoco")
     }
