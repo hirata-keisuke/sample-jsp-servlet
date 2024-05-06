@@ -39,9 +39,10 @@ tasks.named<Test>("test") {
 }
 
 tasks.jacocoTestReport {
+    executionData = files(tasks.jacocoTestReport.executionData)
     reports {
         xml.required = true
-        csv.required = false
+        csv.required = true
         html.outputLocation = layout.buildDirectory.dir("app/build/reports/jacoco")
     }
 }
