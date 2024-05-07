@@ -50,6 +50,6 @@ tasks.jacocoTestReport {
     }
 }
 
-tasks.named('check') {
-    dependsOn(tasks.named('jacocoTestReport', JacocoReport))
+tasks.named("check") {
+    dependsOn(tasks.named("jacocoTestReport", JacocoReport))
 }
