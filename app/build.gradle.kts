@@ -26,11 +26,6 @@ java {
     }
 }
 
-checkstyle {
-    ignoreFailures = true
-    configFile = file("../config/checkstyle/sun_checks.xml")
-}
-
 jacoco {
     toolVersion = "0.8.11"
     reportsDirectory = layout.buildDirectory.dir("app/build/reports/jacoco")
@@ -43,6 +38,11 @@ tasks.named<Test>("test") {
         events("skipped", "passed", "failed")
     }
     finalizedBy("jacocoTestReport")
+}
+
+tasks.named<Checkstyle>("checkstyle") {
+    configFile = file("../config/checkstyle/sun_checks.xml")
+    ignoreFailures = true
 }
 
 tasks.jacocoTestReport {
