@@ -35,7 +35,7 @@ tasks.named<Test>("test") {
     useJUnitPlatform()
     maxHeapSize = "1G"
     testLogging {
-        events("passed")
+        events("skipped", "passed", "failed")
     }
     finalizedBy("jacocoTestReport")
 }
