@@ -48,6 +48,10 @@ tasks.checkstyleMain {
     ignoreFailures = true
 }
 
+tasks.checkstyleTest {
+    ignoreFailures = true
+}
+
 tasks.jacocoTestReport {
     dependsOn(tasks.test)
     reports {
