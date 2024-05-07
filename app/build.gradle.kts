@@ -41,7 +41,9 @@ tasks.named<Test>("test") {
 }
 
 tasks.jacocoTestReport {
-    classDirectories(layout.buildDirectory.dir("app/build/classes"))
+    doFirst {
+        classDirectories.setFrom(files("build/classes/java"))
+    }
     dependsOn(tasks.test)
     reports {
         xml.required = true
