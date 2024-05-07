@@ -44,7 +44,7 @@ checkstyle {
     configFile = file("../config/checkstyle/sun_checks.xml")
 }
 
-checkstyleMain {
+tasks.checkstyleMain {
     ignoreFailures = true
 }
 
