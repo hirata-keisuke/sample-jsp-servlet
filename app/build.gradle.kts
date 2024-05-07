@@ -42,6 +42,11 @@ tasks.named<Test>("test") {
 
 checkstyle {
     configFile = file("../config/checkstyle/sun_checks.xml")
+    doLast {
+        if (it.failureCount > 0) {
+            logger.error("Checkstyleに失敗がありました。")
+        }
+    }
 }
 
 tasks.jacocoTestReport {
