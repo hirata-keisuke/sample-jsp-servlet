@@ -26,6 +26,10 @@ java {
     }
 }
 
+checkstyle {
+    configFile = file("config/checkstyle/sun_checks.xml")
+}
+
 jacoco {
     toolVersion = "0.8.11"
     reportsDirectory = layout.buildDirectory.dir("app/build/reports/jacoco")
