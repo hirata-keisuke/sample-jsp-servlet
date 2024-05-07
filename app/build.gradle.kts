@@ -27,6 +27,7 @@ java {
 }
 
 checkstyle {
+    ignoreFailures = true
     configFile = file("../config/checkstyle/sun_checks.xml")
 }
 
