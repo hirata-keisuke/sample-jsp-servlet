@@ -27,7 +27,7 @@ java {
 }
 
 checkstyle {
-    configFile = file("${configDirectory}/sun_checks.xml")
+    configFile = file("../config/checkstyle/sun_checks.xml")
 }
 
 jacoco {
