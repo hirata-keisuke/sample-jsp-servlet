@@ -41,13 +41,15 @@ tasks.named<Test>("test") {
 }
 
 tasks.jacocoTestReport {
-    doFirst {
-        classDirectories.setFrom(files("build/classes/java"))
-    }
     dependsOn(tasks.test)
     reports {
         xml.required = true
         html.required = true
+        xml.outputLocation = file("${rootDir}/build/reports/jacoco/jacocoTestReport.xml")
         html.outputLocation = layout.buildDirectory.dir("app/build/reports/jacoco")
     }
+}
+
+tasks.named('check') {
+    dependsOn(tasks.named('jacocoTestReport', JacocoReport))
 }
