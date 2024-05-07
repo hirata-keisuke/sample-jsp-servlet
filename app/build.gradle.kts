@@ -41,6 +41,7 @@ tasks.named<Test>("test") {
 }
 
 tasks.jacocoTestReport {
+    classDirectories = layout.buildDirectory.dir("app/build/classes")
     dependsOn(tasks.test)
     reports {
         xml.required = true
