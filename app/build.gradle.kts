@@ -40,7 +40,7 @@ tasks.named<Test>("test") {
     finalizedBy("jacocoTestReport")
 }
 
-tasks.named<CheckstyleExtension>("checkstyle") {
+task.withType(Checkstyle) {
     configFile = file("../config/checkstyle/sun_checks.xml")
     ignoreFailures = true
 }
