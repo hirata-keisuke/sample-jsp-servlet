@@ -60,7 +60,7 @@ tasks.spotbugsMain {
     reports {
         xml.required = true
         html.required = true
-        xml.outputLocation = file("$buildDir/reports/spotbugs.xml)
+        xml.outputLocation = file("$buildDir/reports/spotbugs.xml")
         html.outputLocation = file("$buildDir/reports/spotbugs.html")
     }
 }
