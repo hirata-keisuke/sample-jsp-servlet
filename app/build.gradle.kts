@@ -4,6 +4,7 @@ plugins {
     war
     checkstyle
     jacoco
+    id("com.github.spotbugs")
 }
 
 repositories {
@@ -18,6 +19,8 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-engine:5.10.0")
     testImplementation("org.junit.platform:junit-platform-launcher:1.10.1")
     testImplementation("org.easymock:easymock:4.3")
+
+    spotbugs("com.github.spotbugs:spotbugs:4.8.0")
 }
 
 java {
