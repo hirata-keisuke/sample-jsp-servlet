@@ -61,6 +61,10 @@ tasks.spotbugsMain {
         required = true
         outputLocation = file("$buildDir/reports/spotbugs/spotbugs.html")
     }
+    reports.create("xml") {
+        required = true
+        outputLocation = file("$buildDir/reports/spotbugs/spotbugs.xml")
+    }
 }
 
 tasks.jacocoTestReport {
