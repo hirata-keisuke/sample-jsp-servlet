@@ -57,9 +57,11 @@ tasks.checkstyleTest {
 
 tasks.spotbugsMain {
     ignoreFailures = true
-    reports.create("html") {
-        required = true
-        outputLocation = file("$buildDir/reports/spotbugs.html")
+    reports {
+        xml.required = true
+        html.required = true
+        xml.outputLocation = file("$buildDir/reports/spotbugs.xml)
+        html.outputLocation = file("$buildDir/reports/spotbugs.html")
     }
 }
 
