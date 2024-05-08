@@ -1,5 +1,7 @@
 package me.action;
 
+import java.util.Calendar;
+
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 
@@ -34,6 +36,14 @@ public class SampleAction {
 
     public final String execute(final HttpServletRequest req) {
         SampleDTO dto = new SampleDTO(firstName, lastName);
+
+        Calendar calendar = Calendar.getInstance();
+        int hour = calendar.get(Calendar.HOUR_OF_DAY);
+        if (hour < 12) {
+            dto.setMessage("Good morning");
+        } else {
+            dto.setMessage("Good afternoon");
+        }
 
         HttpSession session = req.getSession(true);
         session.setAttribute("dto", dto);
