@@ -4,7 +4,7 @@ plugins {
     war
     checkstyle
     jacoco
-    id("com.github.spotbugs")
+    id("com.github.spotbugs") version "6.0.14"
 }
 
 repositories {
