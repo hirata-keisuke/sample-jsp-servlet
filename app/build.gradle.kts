@@ -44,7 +44,7 @@ tasks.named<Test>("test") {
 }
 
 checkstyle {
-    configFile = file("../config/checkstyle/sun_checks.xml")
+    configFile = file("$rootDir/config/checkstyle/sun_checks.xml")
 }
 
 tasks.checkstyleMain {
