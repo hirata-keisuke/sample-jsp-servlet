@@ -40,6 +40,9 @@ tasks.named<Test>("test") {
     testLogging {
         events("skipped", "passed", "failed")
     }
+    reports {
+        junitXml.outputLocation = layout.buildDirectory.dir("$buildDir/reports/junit")
+    }
     finalizedBy("jacocoTestReport")
 }
 
@@ -72,8 +75,8 @@ tasks.jacocoTestReport {
     reports {
         xml.required = true
         html.required = true
-        xml.outputLocation = file("build/reports/jacoco/jacocoReport.xml")
-        html.outputLocation = file("build/reports/jacoco/jacocoReport.html")
+        xml.outputLocation = file("$buildDir/reports/jacoco/jacocoReport.xml")
+        html.outputLocation = file("$buildDir/reports/jacoco/jacocoReport.html")
     }
 }
 
